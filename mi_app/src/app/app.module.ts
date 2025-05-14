@@ -3,16 +3,17 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MyComponentComponent } from './my-component/my-component.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CharacterComponentComponent } from './character-component/character-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyComponentComponent
+    CharacterComponentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule
   ],
   providers: [
     provideClientHydration(withEventReplay())

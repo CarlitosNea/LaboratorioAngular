@@ -1,0 +1,15 @@
+<p>Lista de personajes</p>
+<div *ngIf="errorMessage">
+    {{ errorMessage }}
+</div>
+<div>
+    <ul *ngIf="characters.length > 0">
+        <li *ngFor="let character of characters">
+            {{character.name}} - {{character.status}}
+        </li>
+    </ul>
+</div>
+
+<p *ngIf="characters.length == 0 && !errorMessage">
+    Cargando...
+</p>
